@@ -1,0 +1,64 @@
+﻿@model EpsilonBank.Models.Transaction
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TransType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DAccNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DAccNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

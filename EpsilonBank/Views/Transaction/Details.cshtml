@@ -1,0 +1,58 @@
+﻿@model EpsilonBank.Models.Transaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TransType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DAccNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DAccNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
